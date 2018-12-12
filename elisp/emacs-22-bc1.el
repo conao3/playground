@@ -1,6 +1,8 @@
 ;; Emacs-22においてdeclare-function絡みの実行エラー
 ;; バイトコンパイルするときだけ表面化する？？
 
+;; [解決済み] emacs-22-bc1-autoload.el 参照のこと
+
 ;; $ /usr/bin/emacs -Q --batch -L ./ -f batch-byte-compile emacs-22-bc1.el
 ;; In toplevel form:
 ;; emacs-22-bc1.el:9:19:Warning: reference to free variable `package-install'
