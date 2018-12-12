@@ -1,0 +1,8 @@
+#+author: conao
+#+date: <2018-12-12 Wed>
+
+* Playground
+[[https://github.com/conao3/leaf.el][https://img.shields.io/github/license/conao3/leaf.el.svg?style=flat-square]]
+
+* What is it?
+Conao's playground.
