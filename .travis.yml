@@ -19,6 +19,8 @@ install:
   - tar xf emacs-bin-${EMACS_VERSION}.tar.gz -C /
   - export EMACS=/tmp/emacs/bin/emacs
 
+install: skip
+
 jobs:
   include:
     - &mytest
@@ -37,6 +39,7 @@ jobs:
 
     - if: branch = master
       stage: "Create melpa recipe archive"
+      install: skip
       script: echo "melpa"
 
     - if: type = cron
