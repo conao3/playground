@@ -7,22 +7,33 @@ git:
 env:
   global:
     - CURL="curl -fsSkL --retry 9 --retry-delay 9"
-  matrix:
-  - EMACS_VERSION=23.4
-  - EMACS_VERSION=24.5
-  - EMACS_VERSION=25.3
-  - EMACS_VERSION=26.1
-  - EMACS_VERSION=master
+#   matrix:
+#   - EMACS_VERSION=23.4
+#   - EMACS_VERSION=24.5
+#   - EMACS_VERSION=25.3
+#   - EMACS_VERSION=26.1
+#   - EMACS_VERSION=master
 
 install:
-#  - $CURL -O https://github.com/npostavs/emacs-travis/releases/download/bins/emacs-bin-${EMACS_VERSION}.tar.gz
-#  - tar xf emacs-bin-${EMACS_VERSION}.tar.gz -C /
-#  - export EMACS=/tmp/emacs/bin/emacs
+  - $CURL -O https://github.com/npostavs/emacs-travis/releases/download/bins/emacs-bin-${EMACS_VERSION}.tar.gz
+  - tar xf emacs-bin-${EMACS_VERSION}.tar.gz -C /
+  - export EMACS=/tmp/emacs/bin/emacs
 
 jobs:
   include:
-    - stage: &mytest
+    - &mytest
+      stage: mytest-env
       script: echo "mytest"
+    - <<: *mytest
+      env: EMACS_VERSION=23.4
+    - <<: *mytest
+      env: EMACS_VERSION=24.5
+    - <<: *mytest
+      env: EMACS_VERSION=25.3
+    - <<: *mytest
+      env: EMACS_VERSION=26.1
+    - <<: *mytest
+      env: EMACS_VERSION=master
 
     - if: branch = master
       stage: "Create melpa recipe archive"
