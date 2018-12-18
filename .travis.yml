@@ -20,8 +20,12 @@ install:
 #  - export EMACS=/tmp/emacs/bin/emacs
 
 script: echo "test"
+
 jobs:
   include:
     - if: branch = master
       stage: "Create melpa recipe archive"
       script: echo "melpa"
+    - if: type = cron
+      stage: "cron job"
+      script: echo "cron"
