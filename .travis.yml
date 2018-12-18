@@ -19,9 +19,9 @@ install:
 #  - tar xf emacs-bin-${EMACS_VERSION}.tar.gz -C /
 #  - export EMACS=/tmp/emacs/bin/emacs
 
+script: echo "test"
 jobs:
   include:
-    - script: echo "test"
     - if: branch = master
       stage: "Create melpa recipe archive"
       script: echo "melpa"
