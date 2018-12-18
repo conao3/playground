@@ -22,6 +22,7 @@ install:
 script: echo "test"
 
 jobs:
+  env:
   include:
     - if: branch = master
       stage: "Create melpa recipe archive"
