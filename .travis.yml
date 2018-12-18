@@ -20,7 +20,8 @@ install:
 #  - export EMACS=/tmp/emacs/bin/emacs
 
 jobs:
-  include:        
+  include:
+    - script: echo "test"
     - if: branch = master
-      stage: Push release tag
-      script: echo "test"
+      stage: "Create melpa recipe archive"
+      script: echo "melpa"
