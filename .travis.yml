@@ -16,5 +16,11 @@ install:
 #  - tar xf emacs-bin-${EMACS_VERSION}.tar.gz -C /
 #  - export EMACS=/tmp/emacs/bin/emacs
 
-script:
-  - ls
+jobs:
+  include:
+    - stage: 'Test'
+      script:
+        - go test -v .
+    - stage: 'Update Check'
+      if: type = cron
+      script: echo 'run on cron'
