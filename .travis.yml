@@ -1,6 +1,9 @@
 language: generic
 sudo: false
 
+git:
+  depth: 1
+
 env:
   global:
     - CURL="curl -fsSkL --retry 9 --retry-delay 9"
