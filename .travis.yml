@@ -22,7 +22,7 @@ install:
 script: echo "test"
 
 jobs:
-  env:
+  env: EMACS_VERSION=26.1
   include:
     - if: branch = master
       stage: "Create melpa recipe archive"
