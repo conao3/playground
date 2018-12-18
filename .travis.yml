@@ -20,9 +20,7 @@ install:
 #  - export EMACS=/tmp/emacs/bin/emacs
 
 jobs:
-  - stage: 'Test'
-    script:
-      - echo 'test'
-  - stage: 'Update Check'
-    if: type = cron
-    script: echo 'run on cron'
+  include:        
+    - if: branch = master
+      stage: Push release tag
+      script: echo "test"
