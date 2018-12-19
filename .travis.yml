@@ -6,3 +6,4 @@ git:
 
 script:
   - emacs --version
+  - emacs -Q --batch -l ./travis-ci/archive-lite.el
