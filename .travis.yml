@@ -7,8 +7,8 @@ git:
 env:
   global:
     - CURL="curl -fsSkL --retry 9 --retry-delay 9"
-#   matrix:
-#   - EMACS_VERSION=23.4
+  matrix:
+  - EMACS_VERSION=23.4
 #   - EMACS_VERSION=24.5
 #   - EMACS_VERSION=25.3
 #   - EMACS_VERSION=26.1
@@ -19,12 +19,12 @@ install:
   - tar xf emacs-bin-${EMACS_VERSION}.tar.gz -C /
   - export EMACS=/tmp/emacs/bin/emacs
 
-install: skip
 
 jobs:
   include:
     - &mytest
       stage: mytest-env
+      install: skip
       script: echo "mytest"
     - <<: *mytest
       env: EMACS_VERSION=23.4
@@ -40,6 +40,11 @@ jobs:
     - if: branch = master
       stage: "Create melpa recipe archive"
       install: skip
+      script: echo "melpa"
+
+    - if: branch = master
+      stage: "melpa archive"
+      env:
       script: echo "melpa"
 
     - if: type = cron
