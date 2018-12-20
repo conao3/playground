@@ -13,7 +13,7 @@ commit: SSHKEY log
 
 	git checkout master
 	git add .
-	git commit -m "by Travis CI (job $TRAVIS_JOB_NUMBER) [skip ci]"
+	git commit -m "by Travis CI (job $$TRAVIS_JOB_NUMBER) [skip ci]"
 
 	git push origin master
 
@@ -21,6 +21,6 @@ log:
 	echo "Commit by Travis-CI (job $$TRAVIS_JOB_NUMBER)" >> commit.log
 
 SSHKEY:
-	openssl aes-256-cbc -K $encrypted_c34d5bfe7b07_key -iv $encrypted_c34d5bfe7b07_iv -in travis_rsa.enc -out ~/.ssh/id_rsa -d
+	openssl aes-256-cbc -K $$encrypted_c34d5bfe7b07_key -iv $$encrypted_c34d5bfe7b07_iv -in travis_rsa.enc -out ~/.ssh/id_rsa -d
 	chmod 600 ~/.ssh/id_rsa
 
