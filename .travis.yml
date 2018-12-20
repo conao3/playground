@@ -14,7 +14,5 @@ git:
 script:
   - emacs --version
   - emacs -Q --batch -l ./travis-ci/archive-lite.el
-  - openssl aes-256-cbc -K $encrypted_c34d5bfe7b07_key -iv $encrypted_c34d5bfe7b07_iv -in travis_rsa.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
-  - ./commit
+  - make commit
 
