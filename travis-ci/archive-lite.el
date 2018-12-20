@@ -11,5 +11,8 @@
            (file-readable-p read-file))
       (with-temp-file write-file
         (setq contents  (prin1-to-string (json-read-file read-file)))
-        (insert contents))
-    (error "file error")))
+        (insert contents)
+        (insert "\n"))
+    (error "File open error")))
+
+(princ "Process completed!!")
