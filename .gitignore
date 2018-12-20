@@ -3,3 +3,6 @@
 
 # elisp compiled files
 *.elc
+
+# melpa archive file
+archive.json
