@@ -1,9 +1,6 @@
 language: generic
 dist: trusty
 
-go:
-  - 1.11.x
-
 git:
   depth: 1
 
@@ -12,5 +9,3 @@ install: true
 script:
   - emacs --version
   - go version
-
-
