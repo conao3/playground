@@ -1,0 +1,41 @@
+{
+  "url": "https://api.github.com/repos/conao3/playground/releases/14744873",
+  "assets_url": "https://api.github.com/repos/conao3/playground/releases/14744873/assets",
+  "upload_url": "https://uploads.github.com/repos/conao3/playground/releases/14744873/assets{?name,label}",
+  "html_url": "https://github.com/conao3/playground/releases/tag/Release",
+  "id": 14744873,
+  "node_id": "MDc6UmVsZWFzZTE0NzQ0ODcz",
+  "tag_name": "Release",
+  "target_commitish": "master",
+  "name": "Release",
+  "draft": false,
+  "author": {
+    "login": "conao3",
+    "id": 4703128,
+    "node_id": "MDQ6VXNlcjQ3MDMxMjg=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/4703128?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/conao3",
+    "html_url": "https://github.com/conao3",
+    "followers_url": "https://api.github.com/users/conao3/followers",
+    "following_url": "https://api.github.com/users/conao3/following{/other_user}",
+    "gists_url": "https://api.github.com/users/conao3/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/conao3/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/conao3/subscriptions",
+    "organizations_url": "https://api.github.com/users/conao3/orgs",
+    "repos_url": "https://api.github.com/users/conao3/repos",
+    "events_url": "https://api.github.com/users/conao3/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/conao3/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "prerelease": false,
+  "created_at": "2018-12-20T02:50:45Z",
+  "published_at": "2018-12-30T13:17:29Z",
+  "assets": [
+
+  ],
+  "tarball_url": "https://api.github.com/repos/conao3/playground/tarball/Release",
+  "zipball_url": "https://api.github.com/repos/conao3/playground/zipball/Release",
+  "body": ""
+}
