@@ -1,17 +1,14 @@
 language: generic
 dist: trusty
 
-env:
-  global:
-    - GIT_COMMITTER_NAME=conao3
-    - GIT_COMMITTER_EMAIL=conao3@gmail.com
-    - GIT_AUTHOR_NAME=conao3
-    - GIT_AUTHOR_EMAIL=conao3@gmail.com
+go:
+  - 1.11.x
 
 git:
   depth: 1
 
 script:
   - emacs --version
+  - go version
 
 
