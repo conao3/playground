@@ -4,8 +4,6 @@ dist: trusty
 git:
   depth: 1
 
-install: true
-
 script:
   - emacs --version
-  - go version
+  - github
