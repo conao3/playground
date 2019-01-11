@@ -1,9 +1,14 @@
 #+author: conao
 #+date: <2018-12-12 Wed>
 
+
 * Playground
+=======
+[[https://app.codacy.com/app/conao3/playground?utm_source=github.com&utm_medium=referral&utm_content=conao3/playground&utm_campaign=Badge_Grade_Dashboard][https://api.codacy.com/project/badge/Grade/3e00fbb264164fc58d7bc5daf704854c]]
+>>>>>>> 4eb3864... add header
 [[https://app.codacy.com/app/conao3/playground?utm_source=github.com&utm_medium=referral&utm_content=conao3/playground&utm_campaign=Badge_Grade_Dashboard][https://api.codacy.com/project/badge/Grade/3e00fbb264164fc58d7bc5daf704854c?.svg]]
 [[https://github.com/conao3/leaf.el][https://img.shields.io/github/license/conao3/leaf.el.svg?style=flat-square]]
+[[https://github.com/conao3/github-header][https://files.conao3.com/github-header/gif/playground.gif]]
 
 * What is it?
 Conao's playground.
