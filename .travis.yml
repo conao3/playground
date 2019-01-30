@@ -23,6 +23,7 @@ install:
   - perl Build.PL
   - yes | ./Build installdeps
   - perl Build.PL
+  - cd ../
 
   - echo '========== make path for po4a =========='
   - export PERL5LIB=`pwd`/po4a-${PO4A_VERSION}/lib/:$PERL5LIB
