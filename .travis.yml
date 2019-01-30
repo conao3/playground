@@ -15,5 +15,6 @@ script:
   - tar zxvf po4a-${PO4A_VERSION}.tar.gz
   - cd po4a-${PO4A_VERSION}
   - echo yes | cpan Module::Build
+  - cpan Module::Build
   - perl Build.PL
   - ./Build installdeps
