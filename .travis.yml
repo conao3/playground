@@ -33,6 +33,7 @@ script:
   - cd po4a-${PO4A_VERSION}
   - perl Build.PL
   - yes | ./Build installdeps
+  - perl Build.PL
 #   - cat cpan-operation.txt | cpan
 #   - perl -E 'say for @INC'
 #   - cpan Module::Build
