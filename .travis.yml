@@ -4,14 +4,17 @@ dist: trusty
 git:
   depth: 1
 
-addons:
-  apt:
-    packages:
-    - yes
+# addons:
+#   apt:
+#     packages:
+#     - yes
 
 env:
   global:
     - PO4A_VERSION=0.55
+
+install:
+  - sudo apt install yes -y
 
 script:
   - emacs --version
