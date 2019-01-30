@@ -9,7 +9,7 @@ ENV:
     - PO4A_VERSION=0.55
 script:
   - emacs --version
-  - curl -O https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
+  - curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
   - tar zxvf po4a-${PO4A_VERSION}.tar.gz
   - cd po4a-${PO4A_VERSION}
   - perl Build.PL
