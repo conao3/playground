@@ -14,12 +14,12 @@ install:
   - echo yes | cpan
   - eval `perl -I$HOME/perl5/lib/perl5 -Mlocal::lib`
   - perl -E 'say for @INC'
-  - cpan Module::Build
 
   - echo '========== install po4a =========='
   - curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
   - tar zxvf po4a-${PO4A_VERSION}.tar.gz
   - cd po4a-${PO4A_VERSION}
+  - cpan Module::Build
   - perl Build.PL
   - yes | ./Build installdeps
   - perl Build.PL
