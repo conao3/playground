@@ -7,7 +7,7 @@ git:
 addons:
   apt:
     packages:
-      - yes
+    - yes
 
 env:
   global:
