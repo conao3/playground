@@ -13,6 +13,7 @@ script:
   - perl -v
   - mkdir local
   - perl -E 'say for @INC'
+  - eval `perl -I$HOME/perl5/lib/perl5 -Mlocal::lib`
   - perl -Mlocal::lib
   - echo yes | cpan
   - perl -E 'say for @INC'
