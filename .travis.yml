@@ -13,6 +13,7 @@ script:
   - perl -v
   - mkdir local
   - perl -E 'say for @INC'
+  - perl -Mlocal::lib
   - echo yes | cpan
   - perl -E 'say for @INC'
   - cpan Module::Build
