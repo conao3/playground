@@ -4,17 +4,9 @@ dist: trusty
 git:
   depth: 1
 
-# addons:
-#   apt:
-#     packages:
-#     - yes
-
 env:
   global:
     - PO4A_VERSION=0.55
-
-# install:
-#   - sudo apt install yes -y
 
 install:
   - perl -E 'say for @INC'
@@ -36,12 +28,3 @@ script:
   - emacs --version
   - perl -v
   - mkdir local
-
-#   - cat cpan-operation.txt | cpan
-#   - perl -E 'say for @INC'
-#   - cpan Module::Build
-#   
-#   
-#   - 
-#   - 
-#   - 
