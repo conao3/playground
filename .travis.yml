@@ -8,7 +8,7 @@ addons:
   apt:
     packages:
       - texinfo
-      - texlive-full
+#      - texlive-full
 
 env:
   global:
@@ -38,8 +38,7 @@ install:
   - perl -E 'say for @INC'
 
   - echo '========== show versions =================================='
-  - echo perl po4a emacs texi2any \
-    | xargs -n1 -I% bash -c '% --version'
+  - make show-versions
 
   - echo '========== end `install` phase ============================'
 
