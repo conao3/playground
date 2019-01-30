@@ -12,6 +12,7 @@ show-versions: $(DEPEND_COMMAND:%=.make-version-%)
 	@:
 
 .make-version-%:
+	@echo "\n===================="
 	-$* --version
 
 commit: SSHKEY melpa-archive
