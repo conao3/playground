@@ -13,7 +13,7 @@ script:
   - perl -v
   - mkdir local
   - perl -E 'say for @INC'
-  - cpan
+  - cat cpan-init.txt | cpan
 #   - cat cpan-operation.txt | cpan
 #   - perl -E 'say for @INC'
 #   - cpan Module::Build
