@@ -4,9 +4,10 @@ dist: trusty
 git:
   depth: 1
 
-ENV:
+env:
   global:
     - PO4A_VERSION=0.55
+
 script:
   - emacs --version
   - curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
