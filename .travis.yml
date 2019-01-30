@@ -7,7 +7,7 @@ git:
 addons:
   apt:
     packages:
-      - texinfo
+      - texinfo=5.0
 #      - texlive-full
 
 env:
