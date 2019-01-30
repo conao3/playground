@@ -7,11 +7,6 @@ SSHKEY = ~/.ssh/id_rsa
 
 all:
 
-initialize-po4a:
-	curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
-	tar zxvf po4a-${PO4A_VERSION}.tar.gz
-	cd po4a-${PO4A_VERSION} && perl Build.PL && yes | ./Build installdeps && perl Build.PL
-
 commit: SSHKEY melpa-archive
 	git remote -v
 	git remote set-url origin git@github.com:conao3/playground.git
