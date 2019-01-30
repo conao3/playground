@@ -6,4 +6,3 @@ git:
 
 script:
   - emacs --version
-  - github
