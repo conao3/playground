@@ -17,7 +17,7 @@ install:
 
   - make initialize-po4a
 
-  - export PERL5LIB=`pwd`/po4a-${PO4A_VERSION}/po4a/lib/:$PERL5LIB
+  - export PERL5LIB=`pwd`/po4a-${PO4A_VERSION}/lib/:$PERL5LIB
   - export PATH=`pwd`/po4a-${PO4A_VERSION}/:$PATH
   - perl -E 'say for @INC'
   - po4a
