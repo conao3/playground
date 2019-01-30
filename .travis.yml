@@ -11,10 +11,11 @@ env:
 script:
   - emacs --version
   - perl -v
+  - mkdir local
   - curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
   - tar zxvf po4a-${PO4A_VERSION}.tar.gz
   - cd po4a-${PO4A_VERSION}
-  - echo yes | cpan Module::Build
+  - cat cpan-operation.txt | cpan
   - cpan Module::Build
   - perl Build.PL
   - ./Build installdeps
