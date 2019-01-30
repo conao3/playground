@@ -20,11 +20,6 @@ commit: SSHKEY melpa-archive
 log:
 	echo "Commit by Travis-CI (job $$TRAVIS_JOB_NUMBER)" >> commit.log
 
-melpa-archive:
-	curl -O https://melpa.org/archive.json
-	mv -f archive.json ./travis-ci/
-	emacs --script ./travis-ci/archive.el
-
 SSHKEY:
 	openssl aes-256-cbc -K $$encrypted_c34d5bfe7b07_key -iv $$encrypted_c34d5bfe7b07_iv -in travis_rsa.enc -out ~/.ssh/id_rsa -d
 	chmod 600 ~/.ssh/id_rsa
