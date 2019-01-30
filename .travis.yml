@@ -20,7 +20,7 @@ install:
   - export PERL5LIB=`pwd`/po4a-${PO4A_VERSION}/lib/:$PERL5LIB
   - export PATH=`pwd`/po4a-${PO4A_VERSION}/:$PATH
   - perl -E 'say for @INC'
-  - po4a
+  - po4a --version
 
 script:
   - pwd
