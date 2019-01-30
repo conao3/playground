@@ -13,10 +13,11 @@ env:
   global:
     - PO4A_VERSION=0.55
 
-install:
-  - sudo apt install yes -y
+# install:
+#   - sudo apt install yes -y
 
 script:
+  - which yes
   - emacs --version
   - perl -v
   - mkdir local
