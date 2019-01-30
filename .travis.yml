@@ -14,7 +14,12 @@ install:
   - eval `perl -I$HOME/perl5/lib/perl5 -Mlocal::lib`
   - perl -E 'say for @INC'
   - cpan Module::Build
+
   - make initialize-po4a
+
+  - export PERL5LIB=`pwd`/po4a-${PO4A_VERSION}/po4a/lib/:$PERL5LIB
+  - export PATH=`pwd`/po4a-${PO4A_VERSION}/:$PATH
+  - po4a
 
 script:
   - pwd
