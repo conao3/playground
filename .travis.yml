@@ -4,6 +4,11 @@ dist: trusty
 git:
   depth: 1
 
+addons:
+  apt:
+    packages:
+      - yes
+
 env:
   global:
     - PO4A_VERSION=0.55
@@ -23,7 +28,7 @@ script:
   - tar zxvf po4a-${PO4A_VERSION}.tar.gz
   - cd po4a-${PO4A_VERSION}
   - perl Build.PL
-  - ./Build installdeps
+  - yes | ./Build installdeps
 #   - cat cpan-operation.txt | cpan
 #   - perl -E 'say for @INC'
 #   - cpan Module::Build
