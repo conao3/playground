@@ -38,10 +38,8 @@ install:
   - perl -E 'say for @INC'
 
   - echo '========== show versions =================================='
-  - perl --version
-  - po4a --version
-  - emacs --version
-  - texi2any --version
+  - echo perl po4a emacs texi2any \
+    | xargs -n1 -I% bash -c '% --version'
 
   - echo '========== end `install` phase ============================'
 
