@@ -16,11 +16,7 @@ env:
 # install:
 #   - sudo apt install yes -y
 
-script:
-  - which yes
-  - emacs --version
-  - perl -v
-  - mkdir local
+install:
   - perl -E 'say for @INC'
   - echo yes | cpan
   - eval `perl -I$HOME/perl5/lib/perl5 -Mlocal::lib`
@@ -34,6 +30,13 @@ script:
   - perl Build.PL
   - yes | ./Build installdeps
   - perl Build.PL
+
+script:
+  - which yes
+  - emacs --version
+  - perl -v
+  - mkdir local
+
 #   - cat cpan-operation.txt | cpan
 #   - perl -E 'say for @INC'
 #   - cpan Module::Build
