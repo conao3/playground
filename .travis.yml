@@ -12,7 +12,9 @@ script:
   - emacs --version
   - perl -v
   - mkdir local
+  - perl -E 'say for @INC'
   - cat cpan-operation.txt | cpan
+  - perl -E 'say for @INC'
   - cpan Module::Build
   - curl -LO https://github.com/mquinson/po4a/releases/download/v${PO4A_VERSION}/po4a-${PO4A_VERSION}.tar.gz
   - tar zxvf po4a-${PO4A_VERSION}.tar.gz

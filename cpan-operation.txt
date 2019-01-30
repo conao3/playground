@@ -1,4 +1,5 @@
 yes
+local::lib
 o conf makepl_arg "LIB=${HOME}/local/perl/lib \
 	PREFIX=${HOME}/local/perl/lib \
 	INSTALLMAN1DIR=${HOME}/local/perl/man/man1 \
