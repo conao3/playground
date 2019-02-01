@@ -10,6 +10,6 @@
 [1]: https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square
 [2]: https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square
 [3]: https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square
-[4]: https://img.shields.io/docker/pulls/conao3/jq.svg?style=flat-square
+[4]: https://img.shields.io/docker/pulls/conao3/po4a.svg?style=flat-square
 [5]: https://images.microbadger.com/badges/image/conao3/po4a.svg
 [6]: https://files.conao3.com/github-header/gif/docker-po4a.gif
