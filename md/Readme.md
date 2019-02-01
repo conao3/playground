@@ -4,7 +4,7 @@
 [![3]](https://github.com/conao3/docker-po4a)
 [![4]](https://cloud.docker.com/u/conao3/repository/docker/conao3/po4a)
 [![5]](https://microbadger.com/images/conao3/po4a)
-
+[![5-]](https://microbadger.com/images/conao3/po4a)
 [![6]](https://github.com/conao3/github-header)
 
 [1]: https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square
@@ -12,4 +12,5 @@
 [3]: https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square
 [4]: https://img.shields.io/docker/pulls/conao3/po4a.svg?style=flat-square
 [5]: https://images.microbadger.com/badges/image/conao3/po4a.svg
+[5-]: https://images.microbadger.com/badges/version/conao3/po4a.svg
 [6]: https://files.conao3.com/github-header/gif/docker-po4a.gif
