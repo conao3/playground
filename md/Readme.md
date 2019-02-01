@@ -6,7 +6,7 @@
 [![5]]()
 [![6]](https://github.com/conao3/github-header)
 
-[1]: https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square github-tag
+[1]: https://img.shields.io/github/tag/conao3/docker-po4a.svg?style=flat-square "github-tag"
 [2]: https://img.shields.io/travis/conao3/docker-po4a/master.svg?style=flat-square
 [3]: https://img.shields.io/github/license/conao3/docker-po4a.svg?style=flat-square
 [4]: https://img.shields.io/docker/pulls/conao3/jq.svg?style=flat-square
