@@ -1,23 +1,56 @@
 (ns conao3.dali.core
-  (:require [dali.io :as io]
-            [ring.adapter.jetty :as server])
+  (:require [compojure.core :refer [defroutes context GET]]
+            [compojure.route :as route]
+            [ring.adapter.jetty :as server]
+            [ring.util.response :as res]
+            [dali.io :as io])
   (:gen-class))
 
 (defonce server (atom nil))
 
 (def document
- [:dali/page
-  [:circle
-   {:stroke :indigo :stroke-width 4 :fill :darkorange}
-   [30 30] 20]])
+  [:dali/page
+   [:circle
+    {:stroke :indigo :stroke-width 4 :fill :darkorange}
+    [30 30] 20]])
 
 (defn render-png []
   (io/render-png document "/tmp/hello.png"))
 
-(defn handler [req]
-  {:status 200
-   :headers {"Content-Type" "text/plain"}
-   :body "Hello, world"})
+(defn html [res]
+  (res/content-type res "text/html; charset=utf-8"))
+
+(defn home-view [req]
+  "<h1>ホーム画面</h1>
+   <a href=\"/todo\">TODO 一覧</a>")
+
+(defn home [req]
+  (-> (home-view req)
+      res/response
+      html))
+
+(def todo-list
+  [{:title "朝ごはんを作る"}
+   {:title "燃えるゴミを出す"}
+   {:title "卵を買って帰る"}
+   {:title "お風呂を洗う"}])
+
+(defn todo-index-view [req]
+  `("<h1>TODO 一覧</h1>"
+    "<ul>"
+    ~@(for [{:keys [title]} todo-list]
+        (str "<li>" title "</li>"))
+    "</ul>"))
+
+(defn todo-index [req]
+  (-> (todo-index-view req)
+      res/response
+      html))
+
+(defroutes handler
+  (GET "/" req home)
+  (GET "/todo" req todo-index)
+  (route/not-found "<h1>404 page not found</h1>"))
 
 (defn start-server []
   (when-not @server
@@ -29,8 +62,9 @@
     (reset! server nil)))
 
 (defn restart-server []
-  (stop-server)
-  (start-server))
+  (when @server
+    (stop-server)
+    (start-server)))
 
 (defn -main
   "I don't do a whole lot ... yet."
