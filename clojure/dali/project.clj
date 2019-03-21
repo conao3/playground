@@ -9,6 +9,6 @@
 
                  ;; svg utility
                  [dali "0.7.4"]]
-  :main ^:skip-aot conao3.dali.core
+  ;; :main ^:skip-aot conao3.dali.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
