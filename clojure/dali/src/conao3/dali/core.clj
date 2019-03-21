@@ -14,8 +14,8 @@
     {:stroke :indigo :stroke-width 4 :fill :darkorange}
     [30 30] 20]])
 
-(defn render-png []
-  (io/render-png document "/tmp/hello.png"))
+(defn render-png [path]
+  (io/render-png document path))
 
 (defn html [res]
   (res/content-type res "text/html; charset=utf-8"))
@@ -47,9 +47,17 @@
       res/response
       html))
 
+(defn png [req]
+  (render-png "/tmp/hello.png")
+  (-> (slurp "/tmp/hello.png")
+      res/response
+      html
+      (res/content-type "image/png")))
+
 (defroutes handler
   (GET "/" req home)
   (GET "/todo" req todo-index)
+  (GET "/png" req png)
   (route/not-found "<h1>404 page not found</h1>"))
 
 (defn start-server []
