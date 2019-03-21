@@ -20,33 +20,6 @@
 (defn html [res]
   (res/content-type res "text/html; charset=utf-8"))
 
-(defn home-view [req]
-  "<h1>ホーム画面</h1>
-   <a href=\"/todo\">TODO 一覧</a>")
-
-(defn home [req]
-  (-> (home-view req)
-      res/response
-      html))
-
-(def todo-list
-  [{:title "朝ごはんを作る"}
-   {:title "燃えるゴミを出す"}
-   {:title "卵を買って帰る"}
-   {:title "お風呂を洗う"}])
-
-(defn todo-index-view [req]
-  `("<h1>TODO 一覧</h1>"
-    "<ul>"
-    ~@(for [{:keys [title]} todo-list]
-        (str "<li>" title "</li>"))
-    "</ul>"))
-
-(defn todo-index [req]
-  (-> (todo-index-view req)
-      res/response
-      html))
-
 (defn png [req]
   (render-png "/tmp/hello.png")
   (-> (slurp "/tmp/hello.png")
@@ -55,8 +28,6 @@
       (res/content-type "image/png")))
 
 (defroutes handler
-  (GET "/" req home)
-  (GET "/todo" req todo-index)
   (GET "/png" req png)
   (route/not-found "<h1>404 page not found</h1>"))
 
@@ -73,8 +44,3 @@
   (when @server
     (stop-server)
     (start-server)))
-
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
