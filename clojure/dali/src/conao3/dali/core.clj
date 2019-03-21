@@ -20,14 +20,8 @@
 (defn html [res]
   (res/content-type res "text/html; charset=utf-8"))
 
-(defn png [req]
-  (render-png "/tmp/hello.png")
-  (-> (slurp "/tmp/hello.png")
-      res/response
-      (res/content-type "image/png")))
-
 (defroutes handler
-  (GET "/png" req png)
+  (route/resources "/png")
   (route/not-found "<h1>404 page not found</h1>"))
 
 (defn start-server []
