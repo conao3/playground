@@ -24,7 +24,6 @@
   (render-png "/tmp/hello.png")
   (-> (slurp "/tmp/hello.png")
       res/response
-      html
       (res/content-type "image/png")))
 
 (defroutes handler
