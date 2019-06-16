@@ -6,3 +6,6 @@
 
 # melpa archive file
 archive.json
+
+# conao3-packages downloaded file
+elisp/elpa
