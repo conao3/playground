@@ -5,5 +5,5 @@ git:
   depth: 1
 
 script:
-#  - echo '{"version":100}' | docker container run -i --rm conao3/jq:1.6 '.version'
-  - cat /proc/sys/kernel/randomize_va_space
+  - emacs --version
+  - emacs --batch -q -l elisp/conao3-packages.el --eval="(emacs-version)"
