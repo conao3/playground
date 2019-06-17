@@ -6,3 +6,4 @@ git:
 
 script:
   - docker run -it --rm -v `pwd`/elisp/conao3-packages.el:/elisp/init.el conao3/emacs:alpine-min-26.2 emacs --batch -q -l /elisp/init.el --eval="(print (emacs-version))"
+  - ip a
