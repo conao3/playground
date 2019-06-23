@@ -1,7 +1,7 @@
 #+author: conao
 #+date: <2018-12-12 Wed>
 
-[[https://github.com/conao3/playground][https://raw.githubusercontent.com/conao3/files/master/header/png/playground.png]]
+[[https://github.com/conao3/playground][https://raw.githubusercontent.com/conao3/files/master/blob/headers/png/playground.png]]
 [[https://github.com/conao3/playground/blob/master/LICENSE][https://img.shields.io/github/license/conao3/playground.svg?style=flat-square]]
 [[https://github.com/conao3/playground/releases][https://img.shields.io/github/tag/conao3/playground.svg?style=flat-square]]
 [[https://travis-ci.org/conao3/playground][https://img.shields.io/travis/conao3/playground/master.svg?style=flat-square]]
