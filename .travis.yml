@@ -7,9 +7,9 @@ env:
     - EMACS_VERSION=verbose-alpine-min-26.2
     - EMACS_VERSION=emacs-snapshot
 
-jobs:
+matrix:
   allow_failures:
-    - env: EMACS=emacs-snapshot
+    - env: EMACS_VERSION=emacs-snapshot
 
 # Ref: https://gist.github.com/rejeep/ebcd57c3af83b049833b
 install:
