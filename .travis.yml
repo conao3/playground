@@ -7,7 +7,7 @@ env:
     - EMACS_VERSION=verbose-alpine-min-26.2
     - EMACS_VERSION=emacs-snapshot
 
-matrix:
+jobs:
   allow_failures:
     - env: EMACS=emacs-snapshot
 
