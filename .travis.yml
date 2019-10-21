@@ -1,10 +1,10 @@
-language: generic
+language: emacs-lisp
 sudo: false
 
 env:
   matrix:
-    - EMACS_VERSION=verbose-alpine-min-26.1
-    - EMACS_VERSION=verbose-alpine-min-26.2
+    - EMACS_VERSION=26.1-min
+    - EMACS_VERSION=26.2-min
     - EMACS_VERSION=emacs-snapshot
 
 matrix:
@@ -23,7 +23,3 @@ install:
 
 script:
   - make all
-
-# script:
-#   - docker run -it --rm -v `pwd`/elisp/conao3-packages.el:/elisp/init.el conao3/emacs:alpine-min-26.2 emacs --batch -q -l /elisp/init.el --eval="(print (emacs-version))"
-#   - ip a
