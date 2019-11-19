@@ -32,7 +32,7 @@ jobs:
         git clone https://github.com/cask/cask.git .cask
         export PATH='$HOME/.cask/bin:$PATH'
         cd -
-        cask help
+        ~/.cask/bin/cask help
         make test
         echo test
     - name: Run tests (allow failure)
