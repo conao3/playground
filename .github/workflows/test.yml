@@ -28,6 +28,7 @@ jobs:
     - name: Run tests
       if: matrix.allow_failure != true
       run: |
+        apt install -y python
         cd
         git clone https://github.com/cask/cask.git .cask
         export PATH='$HOME/.cask/bin:$PATH'
