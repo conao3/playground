@@ -28,6 +28,11 @@ jobs:
     - name: Run tests
       if: matrix.allow_failure != true
       run: |
+        cd
+        hub clone cask/cask
+        export PATH='$HOME/.cask/bin:$PATH'
+        cd -
+        cask help
         make test
         echo test
     - name: Run tests (allow failure)
