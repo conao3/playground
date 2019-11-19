@@ -29,8 +29,8 @@ jobs:
       if: matrix.allow_failure != true
       run: |
         cd
-        git clone https://github.com/cask/cask.git
-        export PATH=$HOME/.cask/bin:$PATH
+        git clone https://github.com/cask/cask.git .cask
+        export 'PATH=$HOME/.cask/bin:$PATH'
         cd -
         cask help
         make test
