@@ -45,7 +45,7 @@ jobs:
     - name: env
       run: env python --version
     - name: Run cask
-      run: ~/.cask/bin/cask help
+      run: cask help
     - name: Run tests
       if: matrix.allow_failure != true
       run: |
