@@ -39,8 +39,13 @@ jobs:
         export PATH='$HOME/.cask/bin:$PATH'
         echo $PATH
         cd -
-        ~/.cask/bin/cask help
 
+    - name: echo path
+      run: echo $PATH
+    - name: env
+      run: env python --version
+    - name: Run cask
+      run: ~/.cask/bin/cask help
     - name: Run tests
       if: matrix.allow_failure != true
       run: |
