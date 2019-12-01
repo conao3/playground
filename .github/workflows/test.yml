@@ -6,10 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Add path
-      run: |
-        export PATH="$HOME/.cask/bin:$PATH"
-        echo $PATH
     - name: Echo path
-      run: |
-        echo $PATH
+      run: echo $PATH
+
+    - uses: actions/setup-python@v1.1.1
+
+    - name: Add path
+      run: export PATH="$HOME/.cask/bin:$PATH"; echo $PATH
+    - name: Echo path
+      run: echo $PATH
