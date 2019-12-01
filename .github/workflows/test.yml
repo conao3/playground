@@ -26,7 +26,16 @@ jobs:
       with:
         version: ${{ matrix.emacs_version }}
 
-    - uses: conao3/setup-cask@master
+    - name: Install test dependency
+      run: |
+        which env
+        which python
+        cd
+        git clone https://github.com/cask/cask.git .cask
+        export PATH="$HOME/.cask/bin:$PATH"
+        echo $PATH
+        cd -
+        cask help
 
     - name: echo path
       run: echo $PATH
