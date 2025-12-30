@@ -1,14 +1,32 @@
-#+author: conao
-#+date: <2018-12-12 Wed>
+#+title: playground
+#+author: conao3
 
 [[https://github.com/conao3/playground][https://raw.githubusercontent.com/conao3/files/master/blob/headers/png/playground.png]]
+
 [[https://github.com/conao3/playground/blob/master/LICENSE][https://img.shields.io/github/license/conao3/playground.svg?style=flat-square]]
 [[https://github.com/conao3/playground/releases][https://img.shields.io/github/tag/conao3/playground.svg?style=flat-square]]
-[[https://travis-ci.org/conao3/playground][https://img.shields.io/travis/conao3/playground/master.svg?style=flat-square]]
-[[https://app.codacy.com/project/conao3/playground/dashboard][https://img.shields.io/codacy/grade/3b0229a6c8dc4d34880b36cd744f46f4.svg?logo=codacy&style=flat-square]]
-[[https://www.patreon.com/conao3][https://img.shields.io/badge/patreon-become%20a%20patron-orange.svg?logo=patreon&style=flat-square]]
-[[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
-[[https://join.slack.com/t/conao3-support/shared_invite/enQtNjUzMDMxODcyMjE1LTA4ZGRmOWYwZWE3NmE5NTkyZjk3M2JhYzU2ZmRkMzdiMDdlYTQ0ODMyM2ExOGY0OTkzMzZiMTNmZjJjY2I5NTM][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
-* What is it?
-Conao's playground.
+* Overview
+
+A personal sandbox for experimenting with new ideas, testing code snippets, and prototyping concepts.
+
+This repository serves as a space for exploration and learning. Code here may be incomplete, experimental, or just for fun.
+
+* Purpose
+
+- Test new programming techniques and patterns
+- Experiment with libraries and frameworks
+- Prototype ideas before moving them to dedicated projects
+- Learn and explore without constraints
+
+* Note
+
+This is a personal playground repository. Code quality and documentation may vary as this is primarily for experimentation.
+
+* Author
+
+- conao3
+
+* License
+
+See the [[file:LICENSE][LICENSE]] file for details.
